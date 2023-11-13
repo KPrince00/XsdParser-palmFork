@@ -4,8 +4,14 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=com.github.xmlet%3AxsdParser&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=com.github.xmlet%3AxsdParser)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=com.github.xmlet%3AxsdParser&metric=bugs)](https://sonarcloud.io/dashboard?id=com.github.xmlet%3AxsdParser)
 
-# XsdParser
+# XsdParser Fork
 
+<div align="justify"> 
+    A fork of XsdParser to migrate to Jakarta and add minor utility functions.  
+    To utilize, clone this repository and use mvn clean install.  You might need to skip tests due to certificates (mvn clean install -Dmaven.test.skip)
+    <br />    
+    <br />   
+</div>  
 
 <div align="justify"> 
     XsdParser is a library that parses a XML Definition file (.xsd) into a list of java objects. Each different XSD tag has 

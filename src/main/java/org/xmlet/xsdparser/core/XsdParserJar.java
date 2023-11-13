@@ -47,9 +47,16 @@ public class XsdParserJar extends XsdParserCore {
         parse(jarPath, filePath);
     }
 
-    private void parse(String jarPath, String filePath){
-        setClassLoader(jarPath);
+    /**
+     * A secondary constructor for parsing files within the current jar
+     * @param filePath
+     */
+    public XsdParserJar(Class sourceClass, String filePath) {
+        this.classLoader = sourceClass.getClassLoader();
+        parse(filePath);
+    }
 
+    private void parse(String filePath) {
         parseJarFile(filePath);
 
         int index = 0;
@@ -61,6 +68,12 @@ public class XsdParserJar extends XsdParserCore {
         }
 
         resolveRefs();
+    }
+
+    private void parse(String jarPath, String filePath){
+        setClassLoader(jarPath);
+
+        this.parse(filePath);
     }
 
     /**
